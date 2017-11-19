@@ -34,6 +34,7 @@ public class Main {
 	}
 	public static void eatCandy(){
 		String candy = "candy";
+		//Hej
 	}
 
 	/**
