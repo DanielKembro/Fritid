@@ -3,6 +3,8 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Main {
 
@@ -12,9 +14,7 @@ public class Main {
 	 * Launch the application.
 	 */
 	public static void openMain() {
-		EventQueue.invokeLater(new Runnable() {
-			
-			
+		EventQueue.invokeLater(new Runnable() {			
 			public void run() {
 				try {
 					Main window = new Main();
@@ -32,6 +32,9 @@ public class Main {
 	public Main() {
 		initialize();
 	}
+	public static void eatCandy(){
+		String candy = "candy";
+	}
 
 	/**
 	 * Initialize the contents of the frame.
@@ -46,7 +49,13 @@ public class Main {
 		scrollPane.setBounds(422, 11, 12, 239);
 		frame.getContentPane().add(scrollPane);
 		
+		
 		JButton btnNewButton = new JButton("Push for help");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				eatCandy();
+			}
+		});
 		btnNewButton.setBounds(133, 96, 89, 23);
 		frame.getContentPane().add(btnNewButton);
 	}
