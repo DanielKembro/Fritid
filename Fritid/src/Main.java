@@ -46,7 +46,7 @@ public class Main {
 		scrollPane.setBounds(422, 11, 12, 239);
 		frame.getContentPane().add(scrollPane);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("Push for help");
 		btnNewButton.setBounds(133, 96, 89, 23);
 		frame.getContentPane().add(btnNewButton);
 	}
