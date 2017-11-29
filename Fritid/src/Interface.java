@@ -95,8 +95,8 @@ public class Interface {
 				
 				if (x==true){
 				if(user.equals("Daniel") && pass.equals("KalleKula")){
-					Main m = new Main();
-					m.openMain();
+					
+					Main.openMain();
 				}
 				else{
 					JOptionPane.showMessageDialog(null, "You've entered wrong user or password","", JOptionPane.INFORMATION_MESSAGE);
