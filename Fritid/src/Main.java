@@ -5,10 +5,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 
 public class Main {
 
 	private JFrame frame;
+	private JTextField txtFieldHi;
 
 	/**
 	 * Launch the application.
@@ -32,8 +34,9 @@ public class Main {
 	public Main() {
 		initialize();
 	}
-	public static void eatCandy(){
-		String candy = "candy";
+	public static String sayHi(){
+		String word = "Hi!" + "" ;
+		return word;
 		//Hej
 	}
 
@@ -54,10 +57,17 @@ public class Main {
 		JButton btnNewButton = new JButton("Push for help");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				eatCandy();
+				
+				txtFieldHi.setText(sayHi());
+				
 			}
 		});
-		btnNewButton.setBounds(133, 96, 89, 23);
+		btnNewButton.setBounds(103, 47, 161, 23);
 		frame.getContentPane().add(btnNewButton);
+		
+		txtFieldHi = new JTextField();
+		txtFieldHi.setBounds(145, 103, 86, 20);
+		frame.getContentPane().add(txtFieldHi);
+		txtFieldHi.setColumns(10);
 	}
 }
