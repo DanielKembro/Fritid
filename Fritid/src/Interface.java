@@ -16,6 +16,10 @@ public class Interface {
 	private JTextField txtFieldPass;
 	private JTextField txtFieldUser;
 	static boolean x = false;
+	private String user;
+	private String pass;
+	
+	
 
 	/**
 	 * Launch the application.
@@ -86,13 +90,13 @@ public class Interface {
 		JButton btnInit = new JButton("Initialize");
 		btnInit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				String user = txtFieldUser.getText(); 
-				String pass = txtFieldPass.getText();
+				user = txtFieldUser.getText(); 
+				pass = txtFieldPass.getText();
 				
 				if (x==true){
 				if(user.equals("Daniel") && pass.equals("KalleKula")){
-					Main m = new Main();
-					m.openMain();
+					
+					Main.openMain();
 				}
 				else{
 					JOptionPane.showMessageDialog(null, "You've entered wrong user or password","", JOptionPane.INFORMATION_MESSAGE);
