@@ -1,6 +1,7 @@
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -69,5 +70,16 @@ public class Main {
 		txtFieldHi.setBounds(145, 103, 86, 20);
 		frame.getContentPane().add(txtFieldHi);
 		txtFieldHi.setColumns(10);
+		
+		JButton btnExit = new JButton("Exit");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				if(JOptionPane.showConfirmDialog(frame,"Do you want to exist", "Exit", JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION){
+					System.exit(0);
+				}
+			}
+		});
+		btnExit.setBounds(296, 205, 89, 23);
+		frame.getContentPane().add(btnExit);
 	}
 }
